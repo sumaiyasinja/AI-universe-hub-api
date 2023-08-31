@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- daisy ui & tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body{
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+    <!-- favicon -->
+    <title class="">AI Universe Hub</title>
+</head>
+<body>
+    <header class="py-10 flex flex-col justify-center gap-6 items-center">
+        <h2 class="font-semibold text-5xl ">AI Universe Hub</h2>
+        <button class="btn text-white font-normal bg-[#EB5757] hover:bg-[#fa6666]">Sort By Date</button>
+
+    </header>
+    <main>
+        <section>
+            <!-- card container -->
+            <div id="card-container" class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- card 1,2,3 ....will add here -->
+            </div>
+        </section>
+        
+        <div class="flex justify-center items-center">
+            <button class="btn text-white font-normal bg-[#EB5757] hover:bg-[#fa6666]">See More</button>
+        </div>
+
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+               
+               
+                <div class="modal-action">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+                </div>
+            </form>
+            </dialog>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
