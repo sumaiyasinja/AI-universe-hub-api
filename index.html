@@ -33,24 +33,30 @@
         </section>
         
         <div class="flex justify-center items-center">
-            <button class="btn text-white font-normal bg-[#EB5757] hover:bg-[#fa6666]">See More</button>
+            <button class="btn my-5 text-white font-normal bg-[#EB5757] hover:bg-[#fa6666]">See More</button>
         </div>
 
         <section class="container mx-auto">
-            <dialog id="my_modal_5" class="p-6 rounded-lg bg-white relative">
-            <form method="dialog" >
+            <dialog id="my_modal_5" class="p-6 rounded-lg bg-white ">
+            <form method="dialog relative" >
+
                     <!-- close button -->
-                    <div class="modal-action -top-10">
+                    <div class="modal-action -top-40 right-2 sm:hidden md:hidden lg:block">
                         <button class=""><img src="./images/cross-mark.png" alt="Close modal" width="40" height="40">
                         </button>
                     </div>
-                <div class="flex gap-5" id="modal_html-container">
+                <div class="flex flex-col lg:flex-row gap-2 lg:gap-5" id="modal_html-container">
                     <!-- modal style here -->
-
-                      
-
+                    
+                    
+                    
                 </div>
-            
+                
+                <!-- close button -->
+                    <div class="modal-action  sm:block md:block lg:hidden">
+                        <button class=""><img src="./images/cross-mark.png" alt="Close modal" width="40" height="40">
+                        </button>
+                    </div>
             </form>
             </dialog>
         </section>

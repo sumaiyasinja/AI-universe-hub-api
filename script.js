@@ -46,7 +46,7 @@ const showCards=(cards)=>{
                     </div>
                     
                     <div class="card-actions flex justify-end">
-                    <button id='${card.id}' onclick="modalDisplay('${card.id}')" class="bg-[#FEF7F7] rounded-full p-3"><img src="./images/Frame (1).png" alt=""></button>
+                    <button id='${card.id}' onclick="modalDisplay('${card.id}')" class="bg-[#FEF7F7] rounded-full p-3 hover:bg-[#ff9c9c]"><img src="./images/Frame (1).png" alt=""></button>
                     </div>
                     </div>
                     </div>
@@ -76,6 +76,7 @@ const modalDisplay=async(id)=>{
     console.log(modal)
     
     const modalContainer = document.getElementById('modal_html-container')
+    modalContainer.innerHTML=''
     const newDiv= document.createElement('div')
     newDiv.classList.add('rounded-lg' ,'border' ,'border-[#EB5757]', 'bg-[#EB5757]', 'bg-opacity-5','p-6')
     
@@ -83,13 +84,13 @@ const modalDisplay=async(id)=>{
     <h3 class="font-bold text-lg">${modal?.description}</h3>
     
     <div class="flex justify-between my-6 p-4">
-    <p class="text-green-600 text-base text-center font-semibold">$10/month <br> Basic</p>
-    <p class="text-yellow-600 text-base text-center font-semibold">$50/month<br>Pro</p>
-    <p class="text-red-600 text-base text-center font-semibold">Contact us<br>Enterprise</p>
+    <p class="text-green-600 text-base text-center font-semibold">${modal?.pricing[0]?.price} <br> ${modal?.pricing[0]?.plan}</p>
+    <p class="text-yellow-600 text-base text-center font-semibold">${modal?.pricing[1]?.price} <br> ${modal?.pricing[1]?.plan}</p>
+    <p class="text-red-600 text-base text-center font-semibold">${modal?.pricing[2]?.price} <br> ${modal?.pricing[2]?.plan}</p>
     </div>
     <div class="flex gap-4">
         <div>
-            <h2 class="font-semibold card-title pb-3">Features</h2>
+            <h2 class="font-semibold text-lg pb-3">Features</h2>
             <ul  class="list-inside list-disc pb-4 text-base text-[#585858]">
             <li>
             ${modal?.features?.['1']?.feature_name}
@@ -104,7 +105,7 @@ const modalDisplay=async(id)=>{
         </div>
         
         <div>
-            <h2 class="font-semibold card-title pb-3">Integrations</h2>
+            <h2 class="font-semibold text-lg pb-3">Integrations</h2>
             <ol  class="list-inside list-disc pb-4 text-base text-[#585858]">
             <li>
             ${modal?.integrations[0]}
@@ -125,6 +126,7 @@ const modalDisplay=async(id)=>{
     const newDiv2= document.createElement('div')
     newDiv.classList.add('bg-white')
     const accuracy= (modal?.accuracy?.score)*100
+  
     
 
     newDiv2.innerHTML= `   
