@@ -16,15 +16,27 @@
         }
     </style>
     <!-- favicon -->
+    <link rel="shortcut icon" href="./images/logo.png" type="image/png">
     <title class="">AI Universe Hub</title>
 </head>
 <body>
-    <header class="py-10 flex flex-col justify-center gap-6 items-center">
-        <h2 class="font-semibold text-5xl ">AI Universe Hub</h2>
-        <button onclick="sortByDate()" class="btn text-white font-normal bg-[#EB5757] hover:bg-[#fa6666]">Sort By Date</button>
+    <header class="py-10 shadow">
+        <h2 class="font-semibold text-5xl text-center pb-5 text-[#EB5757]">AI Universe Hub</h2>
+        <!-- banner -->
+        <div class="p-4 flex justify-between items-center ">
+            <p class="text-[#585858] text-xl">“Success in creating AI would be the biggest event in human history. <br> Unfortunately, it might also be the last, unless we learn how to avoid the risks.”</p>
+            <img src="./images/logo_AI.png" alt="">
+
+        </div>
+        <div class="flex justify-center items-center">
+            <button onclick="sortByDate()" class="btn text-white font-normal bg-[#EB5757] hover:bg-[#fa6666]">Sort By Date</button>
+
+        </div>
 
     </header>
-    <main>
+    
+
+    <main class="my-6">
         <section>
             <!-- card container -->
             <div id="card-container" class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

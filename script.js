@@ -10,8 +10,12 @@ const loadData=async()=>{
 }
 
 //show card
-const showCards=(cards)=>{
+const showCards=(cards,isSeeMore=1)=>{
     const cardContainer = document.getElementById('card-container')
+    //Showing only 6 cards
+        // if(!isSeeMore){     
+        //     cards =  cards.slice(0,6)
+        // }
 
     cards.forEach(card => {
     
@@ -172,3 +176,4 @@ console.log(card);
   
   
 //   }
+
