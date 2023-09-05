@@ -21,7 +21,7 @@
 <body>
     <header class="py-10 flex flex-col justify-center gap-6 items-center">
         <h2 class="font-semibold text-5xl ">AI Universe Hub</h2>
-        <button class="btn text-white font-normal bg-[#EB5757] hover:bg-[#fa6666]">Sort By Date</button>
+        <button onclick="sortByDate()" class="btn text-white font-normal bg-[#EB5757] hover:bg-[#fa6666]">Sort By Date</button>
 
     </header>
     <main>
@@ -36,18 +36,21 @@
             <button class="btn text-white font-normal bg-[#EB5757] hover:bg-[#fa6666]">See More</button>
         </div>
 
-        <section>
-            <!-- Open the modal using ID.showModal() method -->
-            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-            <form method="dialog" class="modal-box">
-                <h3 class="font-bold text-lg">Hello!</h3>
-                <p class="py-4">Press ESC key or click the button below to close</p>
-               
-               
-                <div class="modal-action">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
+        <section class="container mx-auto">
+            <dialog id="my_modal_5" class="p-6 rounded-lg bg-white relative">
+            <form method="dialog" >
+                    <!-- close button -->
+                    <div class="modal-action -top-10">
+                        <button class=""><img src="./images/cross-mark.png" alt="Close modal" width="40" height="40">
+                        </button>
+                    </div>
+                <div class="flex gap-5" id="modal_html-container">
+                    <!-- modal style here -->
+
+                      
+
                 </div>
+            
             </form>
             </dialog>
         </section>
@@ -56,3 +59,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+      
+
